@@ -11,7 +11,7 @@ const Header = () => {
     <>
       <div className="top-header">
         <div className="bg-black text-white p-3 text-center text-xs font-custom font-bold uppercase tracking-wider">
-          Hello Tailwind CSS!
+          FREE DELIVERY, RETURN & EXCHANGE
         </div>
       </div>
       <div className="header p-4 px-8">
@@ -84,7 +84,10 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm font-custom">
+                <a
+                  href="#"
+                  className="hero-btn text-sm font-custom"
+                >
                   <FiShoppingCart />
                 </a>
               </li>

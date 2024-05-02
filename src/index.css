@@ -3,5 +3,17 @@
 @tailwind utilities;
 @font-face {
   font-family: "Adihaus";
-  src: url(./assets/AdihausDIN.ttf) format('ttf');
+  src: url(./assets/AdihausDIN.ttf) format("ttf");
+}
+.primary-btn {
+  position: relative;
+}
+.primary-btn:after {
+  border: 1px solid #ffffff;
+  height: 100%;
+  right: -3px;
+  top: 4px;
+  width: 100%;
+  position: absolute;
+  content: "";
 }

@@ -30,11 +30,11 @@ const Hero = () => {
         </p>
         <a
           href="#"
-          className="text-sm uppercase font-medium text-black bg-white p-3 inline-flex items-center gap-2 rounded-sm font-custom"
+          className="text-sm primary-btn uppercase font-medium text-black bg-white p-3 inline-flex items-center gap-2 rounded-sm font-custom"
         >
           Shop Now <FiArrowRight />
         </a>
-        <button onClick={togglePlay} className="text-white block text-4xl pt-4">
+        <button onClick={togglePlay} className="text-white block text-4xl pt-6">
           {isPlaying ? <FiPauseCircle /> : <FiPlayCircle />}
         </button>
       </div>
