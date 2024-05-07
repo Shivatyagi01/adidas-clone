@@ -3,7 +3,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 // images
 import shoes from "../../assets/img/shoe.avif";
-import { MdOutlineViewCarousel } from "react-icons/md";
 
 const ProductTab = () => {
   const [activeTab, setActiveTab] = useState(1);
