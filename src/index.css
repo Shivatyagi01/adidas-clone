@@ -1,15 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: "Adihaus";
-  src: url(./assets/AdihausDIN.ttf) format("ttf");
+@layer base {
+  @font-face {
+    font-family: "Adihaus";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./assets/AdihausDIN-Regular.woff2) format("woff2");
+  }
 }
 .primary-btn {
   position: relative;
 }
 .primary-btn:after {
   border: 1px solid #ffffff;
+  height: 100%;
+  right: -3px;
+  top: 4px;
+  width: 100%;
+  position: absolute;
+  content: "";
+}
+.primary-btn.btn-2:after {
+  border: 1px solid #000000;
   height: 100%;
   right: -3px;
   top: 4px;

@@ -8,6 +8,10 @@ export default {
         serif: ["Georgia", "Times New Roman", "serif"],
         custom: ["Adihaus", "sans-serif"],
       },
+      colors: {
+        mustard: "#f5f5e5",
+        highlight: "#ede734",
+      },
     },
   },
   plugins: [],

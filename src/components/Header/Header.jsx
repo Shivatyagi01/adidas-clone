@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "tailwindcss/tailwind.css";
-import { FiUser, FiShoppingCart, FiHeart, FiX } from "react-icons/fi";
+import {FiUser, FiShoppingCart, FiHeart, FiX } from "react-icons/fi";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);

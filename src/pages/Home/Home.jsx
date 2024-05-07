@@ -4,6 +4,8 @@ import Hero from "../../components/Hero/Hero";
 import Popular from "../../components/Popular/Popular";
 import ProductTab from "../../components/ProductTab/ProductTab";
 import Hot from "../../components/Hot/Hot";
+import Seo from "../../components/Seo/Seo";
+import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <>
@@ -11,7 +13,9 @@ const Home = () => {
       <Hero />
       <Popular />
       <ProductTab />
-      <Hot/>
+      <Hot />
+      <Seo />
+      <Footer/>
     </>
   );
 };
