@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "tailwindcss/tailwind.css";
 import {FiUser, FiShoppingCart, FiHeart, FiX } from "react-icons/fi";
 

@@ -4,8 +4,8 @@ import { FiArrowRight, FiInstagram } from "react-icons/fi";
 const Footer = () => {
   return (
     <>
-      <div className="footer">
-        <div className="top-footer bg-highlight p-4">
+      <div className="footer mt-8">
+        <div className="top-footer bg-highlight p-8">
           <div className="container mx-auto flex justify-center	items-center gap-8">
             <h2 className="font-bold text-2xl">JOIN ADIDAS AND GET 15% OFF</h2>
             <a

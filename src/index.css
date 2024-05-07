@@ -10,6 +10,7 @@
     src: url(./assets/AdihausDIN-Regular.woff2) format("woff2");
   }
 }
+*{font-family: "Adihaus";}
 .primary-btn {
   position: relative;
 }
