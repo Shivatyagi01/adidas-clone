@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202d8"
+  },
+  "image": "shoe-1.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Sale",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202d9"
+  },
+  "image": "shoe-2.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Sale",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202da"
+  },
+  "image": "shoe-3.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Best",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202db"
+  },
+  "image": "shoe-4.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Sale",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202dc"
+  },
+  "image": "shoe-5.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Sale",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202dd"
+  },
+  "image": "shoe-6.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Featured",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202de"
+  },
+  "image": "shoe-7.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Featured",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202df"
+  },
+  "image": "shoe.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Featured",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202e0"
+  },
+  "image": "shoe.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Featured",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202e1"
+  },
+  "image": "shoe.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Best Selling",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202e2"
+  },
+  "image": "shoe.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Best Selling",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "663c8cc4f1b6481cd22202e3"
+  },
+  "image": "shoe.avif",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Best Selling",
+  "createdAt": {
+    "$date": "2024-05-09T08:43:48.741Z"
+  }
+}]

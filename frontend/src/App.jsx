@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop"
 // Header and Footer
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -10,9 +11,10 @@ function App() {
   return (
     <>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/product" element={<ProductDetails />} />
+        <Route path="/product/:productId" element={<ProductDetails />} />
       </Routes>
       <Footer />
     </>

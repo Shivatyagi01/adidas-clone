@@ -1,0 +1,136 @@
+var documents = [
+ {
+   image: "shoe-1.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ },
+ {
+   image: "shoe-2.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ },
+ {
+   image: "shoe-3.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ },
+ {
+   image: "shoe-4.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ },
+ {
+   image: "shoe-5.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ },
+ {
+   image: "shoe-6.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ },
+ {
+   image: "shoe-7.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ },
+ {
+   image: "shoe.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ },
+ {
+   image: "shoe.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ },
+ {
+   image: "shoe.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ },
+ {
+   image: "shoe.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ },
+ {
+   image: "shoe.avif",
+   video:"shoe-1.webm",
+   name: "Samba OG Shoes",
+   price: "10999",
+   category: "shoes",
+   url: "/product",
+   gender: "male",
+   tag: "Best",
+   createdAt: new Date()
+ }
+]
+
+db.products.insertMany(documents)

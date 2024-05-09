@@ -28,6 +28,22 @@ app.get("/api/data", async (req, res) => {
   }
 });
 
+//Products details
+app.get("/api/data/:productId", async (req, res) => {
+  const productId = req.params.productId;
+  try {
+    const product = await ProductsModel.findOne({ _id: productId });
+
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
+    }
+
+    res.json({ product });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
