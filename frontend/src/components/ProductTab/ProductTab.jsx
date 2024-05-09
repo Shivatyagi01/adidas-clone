@@ -1,15 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
+import { Link } from "react-router-dom";
 import "react-multi-carousel/lib/styles.css";
-// images
-import shoes from "../../assets/img/shoe.avif";
+import CustomPrevArrow from "../../elements/CustomPrevArrow";
+import CustomNextArrow from "../../elements/CustomNextArrow";
+import axios from "axios";
 
 const ProductTab = () => {
+  const [data, setData] = useState([]);
   const [activeTab, setActiveTab] = useState(1);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get("http://localhost:5000/api/data");
+      setData(result.data.products);
+    };
+    fetchData();
+  }, []);
 
   const CustomNextArrow = ({ onClick }) => (
     <button
@@ -60,7 +71,7 @@ const ProductTab = () => {
       slidesToSlide: 2,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 768 },  
+      breakpoint: { max: 1024, min: 768 },
       items: 3,
       slidesToSlide: 3,
     },
@@ -70,94 +81,7 @@ const ProductTab = () => {
       slidesToSlide: 1,
     },
   };
-  const NewArrivals = [
-    {
-      id: 1,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-    {
-      id: 2,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-  ];
-  const Bests = [
-    {
-      id: 1,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-    {
-      id: 2,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-    {
-      id: 3,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-    {
-      id: 4,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-    {
-      id: 5,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-    {
-      id: 6,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-    {
-      id: 7,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-    {
-      id: 8,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-    {
-      id: 9,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-    {
-      id: 10,
-      image: shoes,
-      name: "Samba OG Shoes",
-      price: 10999.0,
-      category: "shoes",
-    },
-  ];
+
   return (
     <>
       <div className="tabs py-8">
@@ -197,23 +121,29 @@ const ProductTab = () => {
                 customLeftArrow={<CustomPrevArrow />}
                 customRightArrow={<CustomNextArrow />}
               >
-                {NewArrivals.map((NewArrival) => (
-                  <div key={NewArrival.id}>
-                    <div className="product-box border-white border-2 border-solid cursor-pointer hover:border-black">
-                      <div className="product-img w-full">
-                        <img
-                          src={NewArrival.image}
-                          alt={NewArrival.name}
-                          className="w-full"
-                        />
-                      </div>
-                      <div className="product-cont py-2">
-                        <p>{NewArrival.name}</p>
-                        <p>{NewArrival.category}</p>
-                      </div>
+                {data
+                  .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+                  .slice(0, 8)
+                  .map((product) => (
+                    <div key={product._id}>
+                      <Link to={`${product.url}/${product._id}`}>
+                        <div className="product-box border-white border-2 border-solid cursor-pointer hover:border-black">
+                          <div className="product-img w-full">
+                            <img
+                              src={`/src/assets/img/${product.image}`}
+                              alt={product.name}
+                              className="w-full"
+                            />
+                          </div>
+                          <div className="product-cont py-2">
+                            <p>{product.name}</p>
+                            <p>{product.category}</p>
+                            <p>{product.tag}</p>
+                          </div>
+                        </div>
+                      </Link>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </Carousel>
             </div>
           )}
@@ -230,23 +160,28 @@ const ProductTab = () => {
                 customLeftArrow={<CustomPrevArrow />}
                 customRightArrow={<CustomNextArrow />}
               >
-                {Bests.map((Best) => (
-                  <div key={Best.id}>
-                    <div className="product-box border-white border-2 border-solid cursor-pointer hover:border-black">
-                      <div className="product-img w-full">
-                        <img
-                          src={Best.image}
-                          alt={Best.name}
-                          className="w-full"
-                        />
-                      </div>
-                      <div className="product-cont py-2">
-                        <p>{Best.name}</p>
-                        <p>{Best.category}</p>
-                      </div>
+                {data
+                  .filter((product) => product.tag === "Best Selling")
+                  .map((best) => (
+                    <div key={best._id}>
+                      <Link to={`${best.url}/${best._id}`}>
+                        <div className="product-box border-white border-2 border-solid cursor-pointer hover:border-black">
+                          <div className="product-img w-full">
+                            <img
+                              src={`/src/assets/img/${best.image}`}
+                              alt={best.name}
+                              className="w-full"
+                            />
+                          </div>
+                          <div className="product-cont py-2">
+                            <p>{best.name}</p>
+                            <p>{best.category}</p>
+                            <p>{best.tag}</p>
+                          </div>
+                        </div>
+                      </Link>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </Carousel>
             </div>
           )}

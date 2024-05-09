@@ -3,7 +3,7 @@ import React from "react";
 const Seo = () => {
   return (
     <>
-      <div className="seo py-8 bg-mustard">
+      <div className="seo py-8 bg-mustard mb-[-2rem]">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 gap-4">
             <div>
