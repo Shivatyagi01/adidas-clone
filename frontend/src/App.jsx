@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop"
+import { AnimatePresence } from "framer-motion";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 // Header and Footer
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -12,10 +13,12 @@ function App() {
     <>
       <Header />
       <ScrollToTop />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/product/:productId" element={<ProductDetails />} />
-      </Routes>
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/product/:productId" element={<ProductDetails />} />
+        </Routes>
+      </AnimatePresence>
       <Footer />
     </>
   );
