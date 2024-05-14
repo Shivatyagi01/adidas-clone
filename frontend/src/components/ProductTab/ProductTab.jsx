@@ -88,8 +88,12 @@ const ProductTab = () => {
                         <div className="product-box border-white border-2 border-solid cursor-pointer hover:border-black">
                           <div className="product-img w-full">
                             <img
-                              src={`/src/assets/img/${product.image}`}
-                              alt={product.name}
+                              src={`/src/assets/img/${
+                                Array.isArray(product.image)
+                                  ? product.image[0].image1
+                                  : product.image
+                              }`}
+                              alt="Product Image"
                               className="w-full"
                             />
                           </div>

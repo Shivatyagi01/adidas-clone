@@ -30,7 +30,14 @@ const ProductGallery = () => {
             autoPlay
             muted
           ></video>
-          <img src={`/src/assets/img/${product.image}`} alt="" />
+          {Array.isArray(product.image) &&
+            product.image.map((imageObj, index) => (
+              <img
+                key={`image-${index}`}
+                src={`/src/assets/img/${Object.values(imageObj)[0]}`}
+                alt={`Image ${index + 1}`}
+              />
+            ))}
         </div>
       ) : (
         <p>Loading product details...</p>
