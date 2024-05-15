@@ -29,7 +29,7 @@ const Hero = () => {
           Three icons, a thousand stories.
         </p>
         <a
-          href="#"
+          href="/shop"
           className="text-sm primary-btn uppercase font-medium text-black bg-white p-3 inline-flex items-center gap-2 rounded-sm font-custom"
         >
           Shop Now <FiArrowRight />

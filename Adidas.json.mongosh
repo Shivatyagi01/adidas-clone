@@ -1,0 +1,11 @@
+db.products.insertOne({
+"image": [{"image1" : "shoe-1.avif"},{"image2" : "shoe-2.avif"},{"image3" : "shoe-3.avif"},{"image4" : "shoe-4.avif"}],
+  "video": "shoe-1.webm",
+  "name": "Samba OG Shoes",
+  "price": "10999",
+  "category": "shoes",
+  "url": "/product",
+  "gender": "male",
+  "tag": "Best Selling",
+  "createdAt": new Date()
+})

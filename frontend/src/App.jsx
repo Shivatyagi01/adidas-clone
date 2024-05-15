@@ -6,6 +6,8 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 // Home
 import Home from "./pages/Home/Home";
+import Shop from "./pages/Shop/Shop";
+import Category from "./pages/Category/Category";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route exact path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/:category" element={<Category />} />
           <Route path="/product/:productId" element={<ProductDetails />} />
         </Routes>
       </AnimatePresence>

@@ -6,6 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 // import
 const ProductsModel = require("./models/Product");
+const CategoryModel = require("./models/Category");
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -19,6 +20,7 @@ db.once("open", () => {
   console.log("Connected to MongoDB");
 });
 
+// get products
 app.get("/api/data", async (req, res) => {
   try {
     const products = await ProductsModel.find();
@@ -46,4 +48,25 @@ app.get("/api/data/:productId", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+});
+
+// get categories
+app.get("/api/category", async (req, res) => {
+  try {
+    const categories = await CategoryModel.find();
+    res.json({ categories });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Route to fetch products by category
+app.get("/api/:category", async (req, res) => {
+  const category = req.params.category;
+  try {
+    const products = await ProductsModel.find({category: category});
+    res.json({ products });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });

@@ -31,7 +31,6 @@ const ProductGallery = () => {
             muted
           ></video>
           {Array.isArray(product.image) ? (
-            // If product.image is an array of objects
             product.image.map((imageObj, index) => (
               <img
                 key={`image-${index}`}
@@ -40,7 +39,6 @@ const ProductGallery = () => {
               />
             ))
           ) : (
-            // If product.image is a single object
             <img src={`/src/assets/img/${product.image}`} alt="Product Image" />
           )}
         </div>
